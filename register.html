@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register Mechanic – SARA</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="hero">
+    <h1>Register Your Shop</h1>
+    <p class="tagline">Help drivers in need by listing your services</p>
+  </div>
+
+  <form action="/api/mechanics" method="POST" class="form">
+    <input name="shopName" placeholder="Shop Name" required />
+    <input name="contactName" placeholder="Contact Name" required />
+    <input name="contactNumber" placeholder="Contact Number" required />
+    <input name="location" id="shopLocation" placeholder="Shop Location" required />
+    <button type="button" onclick="useLocation('shopLocation')">Use Current Location</button>
+
+    <h3>Services Offered</h3>
+    <div class="checkbox-group">
+      <label><input type="checkbox" name="services" value="Flat Tire" /> Flat Tire</label>
+      <label><input type="checkbox" name="services" value="No Fuel" /> No Fuel</label>
+      <label><input type="checkbox" name="services" value="Engine Trouble" /> Engine Trouble</label>
+      <label><input type="checkbox" name="services" value="Accident" /> Accident</label>
+      <label><input type="checkbox" name="services" value="Battery Dead" /> Battery Dead</label>
+      <label><input type="checkbox" name="services" value="Need Towing" /> Need Towing</label>
+    </div>
+
+    <button type="submit">Register Shop</button>
+  </form>
+  <script src="script.js"></script>
+</body>
+</html>
